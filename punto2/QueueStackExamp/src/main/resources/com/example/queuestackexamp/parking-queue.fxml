@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.queuestackexamp.controller.ParkingQueueController">
+   <Button layoutX="274.0" layoutY="315.0" mnemonicParsing="false" onAction="#openMenu" text="Menu" />
+   <ButtonBar layoutX="86.0" layoutY="259.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="442.0">
+      <buttons>
+         <Button mnemonicParsing="false" onAction="#addCar" text="Hacer cola" />
+         <Button mnemonicParsing="false" onAction="#popCar" text="entrar al parqueadero" />
+         <Button mnemonicParsing="false" onAction="#resetQueue" text="Reiniciar cola" />
+      </buttons>
+   </ButtonBar>
+   <TextField fx:id="tfPlate" layoutX="223.0" layoutY="234.0" />
+   <HBox fx:id="hbCarQueue" alignment="CENTER_RIGHT" layoutX="77.0" layoutY="100.0" prefHeight="100.0" prefWidth="442.0">
+      <children>
+         <Label fx:id="lbCarPlate" />
+      </children>
+   </HBox>
+   <Label layoutX="182.0" layoutY="238.0" text="Placa" />
+   <Label fx:id="alert" layoutX="384.0" layoutY="238.0" textFill="RED" />
+</AnchorPane>
